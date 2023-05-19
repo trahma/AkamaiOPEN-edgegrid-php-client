@@ -1089,7 +1089,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $this->assertFalse($client->setSimpleLog('test'));
     }
 
-    public function makeAuthHeaderProvider()
+    public static function makeAuthHeaderProvider()
     {
         $testdata = json_decode(file_get_contents(__DIR__ . '/testdata.json'), true);
         $tests = $testdata['tests'];
@@ -1105,7 +1105,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         }
     }
 
-    public function createFromEdgeRcProvider()
+    public static function createFromEdgeRcProvider()
     {
         return [
             [
@@ -1127,7 +1127,7 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         ];
     }
 
-    public function loggingProvider()
+    public static function loggingProvider()
     {
         return [
             [
